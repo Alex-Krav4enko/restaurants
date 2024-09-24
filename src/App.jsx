@@ -1,16 +1,18 @@
 import './App.css'
-import Restaurant from "./components/Restaurant/Restaurant.jsx";
-import {restaurants} from "./mock.js";
-
+import { restaurants } from "./mock.js";
+import { Layout } from "./components/features/Layout/Layout.jsx";
+import { Restaurant } from "./components/features/Restaurant/Restaurant.jsx";
 
 const App = () => {
   return (
-      <div>
-        <Restaurant restaurant={restaurants[0]} />
-        <Restaurant restaurant={restaurants[1]} />
-        <Restaurant restaurant={restaurants[2]} />
-        <Restaurant restaurant={restaurants[3]} />
-      </div>
+      <Layout>
+          <div>
+            <Restaurant restaurant={restaurants[0]} />
+            <Restaurant restaurant={restaurants[1]} />
+            <Restaurant restaurant={restaurants[2]} />
+            <Restaurant restaurant={restaurants[3]} />
+          </div>
+      </Layout>
   );
 };
 
